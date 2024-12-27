@@ -1,0 +1,21 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us-table {
+    width: 50%; 
+    table-layout: fixed; 
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.about-us-table th,
+.about-us-table td {
+    padding: 10px; 
+    text-align: center; 
+}

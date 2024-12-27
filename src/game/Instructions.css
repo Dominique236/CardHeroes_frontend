@@ -1,0 +1,22 @@
+.mazo {
+    height: 100px;
+    float: center;
+    margin-right: 10px;
+}
+
+h2 {
+    text-align: justify;
+}
+
+li {
+    text-align: justify;
+}
+
+p {
+    text-align: justify;
+}
+
+.highlight {
+    color: #6E8880; /* Cambia esto por el color que desees */
+    font-weight: bold;
+}
