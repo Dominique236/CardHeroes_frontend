@@ -1,60 +1,60 @@
 .header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  padding: 10px 20px;
 }
 
 a {
-    color: #2E2C39;
-    text-decoration: none; 
+  color: #2E2C39;
+  text-decoration: none; 
 }
 
 .volver {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
 }
 
 .arrow-left {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
 }
 
 .user-info {
-    text-align: right;
-    font-weight: bold;
+  text-align: right;
+  font-weight: bold;
 }
   
 .arrow-left {
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #6E8880;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 3px; 
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #6E8880;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px; 
 }
 
 .button-rojo button {
-    cursor: pointer;
-    background-color: #F1BFC0;
-    border: 2px solid #E7E3F1;
-    color: white;
-    padding: 14px 30px;
-    margin-left: 3%;
-    margin-right: 3%;
+  cursor: pointer;
+  background-color: #F1BFC0;
+  border: 2px solid #E7E3F1;
+  color: white;
+  padding: 14px 30px;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .button-cafe {
-    cursor: pointer;
-    background-color: #AFA3D5;
-    border: 2px solid #E7E3F1;
-    color: white;
+  cursor: pointer;
+  background-color: #AFA3D5;
+  border: 2px solid #E7E3F1;
+  color: white;
 }
 
 .logout button {
@@ -68,41 +68,41 @@ a {
 }
 
 a:hover {
-    color: #6E8880;
+  color: #6E8880;
 }
 
-h2 {
-    background-color: #6E8880;
-    color: white;
-    text-align: center;
-    max-width: 65%;
-    margin: 0 auto;
+.Leaderboard {
+  background-color: #6E8880;
+  color: white;
+  text-align: center;
+  max-width: 65%;
+  margin: 0 auto;
 }
 
 .leaderboard-table {
-    width: 65%;
-    margin: 15px auto;
+  width: 65%;
+  margin: 15px auto;
 }
 
 .leaderboard-table tbody tr {
-    border-bottom: 1px solid #ccc; /* Línea gris debajo de cada fila */
+  border-bottom: 1px solid #ccc; /* Línea gris debajo de cada fila */
 }
 
 .leaderboard-table thead {
-    color: white;
-    background-color: #2E2C39;
+  color: white;
+  background-color: #2E2C39;
 }
 
 .leaderboard-table tbody {
-    color: #2E2C39;
-    background-color: #AFA3D5;
-    font-weight: bold;
+  color: #2E2C39;
+  background-color: #AFA3D5;
+  font-weight: bold;
 }
 
 .rank {
-    color: white;
-    background-color: #2E2C39;
-    width: 20%;
+  color: white;
+  background-color: #2E2C39;
+  width: 20%;
 }
   
 /* Estilos para el pop-up */

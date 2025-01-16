@@ -1,0 +1,26 @@
+.carta-container {
+    position: relative;
+    display: inline-block;
+    box-shadow: 2px 2px 2px #5f4c43;
+    border-radius: 9px;
+    margin: 0 15px; 
+}
+.carta-container:hover {
+    box-shadow: 4px 4px 4px #A93639; /* Cambiar la sombra al hacer hover */
+}
+    
+.carta-arcano {
+    width: auto;
+    height: 75px;
+    display: block;
+}
+  
+.carta-nivel {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}

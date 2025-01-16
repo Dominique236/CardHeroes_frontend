@@ -1,0 +1,36 @@
+.card {
+    padding: 0.7em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 0.3em; /* Espaciado externo */
+    max-width: 190px; /* Ancho máximo */
+    background-color: #2E2C39;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: bold; 
+}
+
+.card-table {
+    color: white;
+}
+
+.card-table td {
+    padding: 0em;
+    vertical-align: middle;
+}
+
+.estrellas-container { 
+    align-items: center;
+    display:inline-flex;
+}
+
+.estrella {
+    height: 40px;
+    padding: 0.3em;
+}
+
+.arcano {
+    width: auto;
+    height: 80px;
+    padding-left: 6px;
+    padding-right: 20px;
+}

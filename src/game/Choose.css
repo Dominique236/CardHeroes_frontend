@@ -1,0 +1,132 @@
+.user-info {
+    position: absolute; /* Saca este elemento del flujo del Flexbox */
+    right: 10px; /* Lo ubica a la derecha del contenedor */
+}
+.container {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: center; /* Centra el contenido principal inicialmente */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+}
+
+.arcanos-table {
+    max-width: 45%;
+    margin: 15px auto;
+    border-spacing: 0px;
+    background-color: #AFA3D5;
+}
+
+.fila-arcano {
+    border: 3px solid #dddddd; /* Define el color y grosor del borde */
+    text-align: center; /* Centra el texto en las celdas */
+    padding: 0px; /* Añade un poco de espacio interior en las celdas */
+}
+
+.fila td {
+    padding: 10px; /* Elimina el relleno interno en las celdas */
+}
+
+.nombre-arcano {
+    font-size: 20px; 
+    font-weight: bold;
+    text-align: center;
+    line-height: 0;   /* Asegura que no haya relleno adicional */
+}
+
+.button-confirmar {
+    background-color: #F1BFC0;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    background-color: #A93639;
+}
+
+.foto-Aeria {
+    height: 130px;
+    width:auto;
+    will-change: filter;
+    transition: filter 300ms;
+    margin-bottom: 0;
+}
+
+.foto-Aeria:hover, .foto-Aeria.selected {
+    filter: drop-shadow(0 0 2em #EAE961);
+}
+
+.foto-Aquos {
+    height: 130px;
+    width:auto;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.foto-Aquos:hover, .foto-Aquos.selected {
+    filter: drop-shadow(0 0 2em #5DC1B9);
+}
+
+.foto-Inferna {
+    height: 130px;
+    width:auto;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.foto-Inferna:hover, .foto-Inferna.selected {
+    filter: drop-shadow(0 0 2em #FF6F6F);
+}
+
+.foto-Terrax {
+    height: 130px;
+    width:auto;
+    will-change: filter;
+    transition: filter 300ms;
+    margin-bottom: 0;
+}
+
+.foto-Terrax:hover, .foto-Terrax.selected {
+    filter: drop-shadow(0 0 2em #89E186);
+}
+
+.arcano-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.arcano-wrapper .overlay {
+    position: absolute; 
+    top: 1px;
+    left: -67px;
+    width: 192%;
+    height: 102%;
+    background-color: rgba(120, 123, 147, 0.5);
+}
+
+.no-disponible img {
+    opacity: 0.28; 
+}
+
+.arcano-wrapper {
+  position: relative; /* Necesario para posicionar el mensaje de forma absoluta */
+}
+
+.mensaje-hover {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+.mensaje-hover.left {
+    left: -260px; /* Ajusta según lo necesario */
+}
+  
+.mensaje-hover.right {
+    left: 105%; /* Ajusta según lo necesario */
+}
+  

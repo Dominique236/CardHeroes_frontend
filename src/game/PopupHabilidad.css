@@ -1,0 +1,36 @@
+.modal-content2 {
+    background-color: #E7E3F1;
+    padding: 20px;
+    border: 2px solid #2E2C39;
+    width: 85%;
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+.modal-content2 h2 {
+    background-color: #E7E3F1;
+    color: #2E2C39
+}
+  
+.modal-content2 p {
+    text-align: center;
+}
+  
+.modal-content2 button {
+    color: white;
+    background-color: #F1BFC0;
+    border-color: #E7E3F1;
+    border-radius: 15px;
+}
+
+.mazo-div2 {
+    padding: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    margin: 1em; /* Espaciado externo */
+    background-color: #AFA3D5;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    width: 950px; /* Cambia este valor para ajustar el ancho */  
+}

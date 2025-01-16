@@ -1,0 +1,72 @@
+.mazo-div {
+    padding: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    margin: 1em; /* Espaciado externo */
+    background-color: #AFA3D5;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    width: 1200px; /* Cambia este valor para ajustar el ancho */  
+}
+
+.mazo-table {
+    color: white;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.mazo-table td {
+    padding: 0.3em;
+    vertical-align: middle;
+}
+
+.mazo-player-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px; /* Ajusta este valor según sea necesario */
+}
+
+.mazo-arcano-container {
+    display: flex;
+    align-items: center;
+    padding-left: 400px;
+}
+
+.mazo-player-details {
+    text-align: center;
+    padding-right: 50px;
+}
+
+.mazo-estrellas-container { 
+    align-items: center;
+    display: inline-flex;
+}
+
+.mazo-estrella {
+    height: 40px;
+    padding: 0.3em;
+}
+
+.mazo-arcano {
+    width: auto;
+    height: 75px;
+    display: block;
+}
+
+.carta-default-container {
+    position: relative;
+    display: inline-block;
+    box-shadow: 2px 2px 2px #5f4c43;
+    border-radius: 5px;
+    margin: 0 15px; 
+}
+.carta-default-container:hover {
+    box-shadow: 4px 4px 4px #A93639; /* Cambiar la sombra al hacer hover */
+}
+
+.carta-default-arcano {
+    width: 55px;
+    height: 75px;
+    display: block;
+}

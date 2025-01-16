@@ -1,0 +1,199 @@
+/* Contenedor principal */
+.app-container {
+    transition: filter 0.3s ease; /* Suaviza la transición al agregar el desenfoque */
+}
+.app-container.blurred {
+    filter: blur(5px); /* Aplica el desenfoque cuando el popup está visible */
+}
+
+.ending-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté sobre el contenido */
+}
+
+/* Fila 1 */
+.fila1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fila1 .ronda {
+    display: flex;
+    justify-content: flex-start; /* Alinea las cartas a la izquierda */
+    gap: 5px; /* Espacio entre las cartas */
+}
+
+.fila1 .ronda.derecha {
+    justify-content: flex-end; /* Alinea las cartas a la derecha */
+}
+
+.fila1 .puntos {
+    display: flex;
+    justify-content: center; /* Centra los puntos */
+    align-items: center;
+    width: 100%; /* Ocupa el espacio restante */
+    text-align: center;
+}
+
+.fila1 .ronda .Carta:hover {
+    box-shadow: none; /* Elimina el efecto de sombra al hacer hover */
+}
+
+/* Fila 2 */
+.fila2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.confirm-button {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a columna */
+  justify-content: flex-start; /* Alinea los elementos al inicio (arriba) */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 30px; /* Espacio entre los botones */
+}
+
+.button-confirmar:disabled {
+    cursor: not-allowed;
+}
+
+.button-habilidad {
+    background-color: #6E8880;
+    color: #FFFFFF;
+}
+
+.select, .selected-oponente {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra las cartas en el medio */
+    width: 150px;  /* Ajusta el ancho a lo que necesites */
+    height: 300px; /* Ajusta la altura a lo que necesites */
+    font-size: 50px;  /* Aumenta el tamaño de la fuente para el texto */
+}
+.select img, .selected-oponente img {
+    width: 100%;   /* Asegura que la imagen ocupe todo el espacio de la celda */
+    height: 100%;  /* Asegura que la imagen ocupe todo el espacio de la celda */
+    object-fit: cover;  /* Mantiene la proporción de la imagen al hacer que se ajuste dentro del contenedor */
+}  
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinea la info a la derecha */
+  gap: 100px;
+}
+
+.popup-seleccion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000; /* Asegura que se superponga a otros elementos */
+}
+
+
+
+
+
+/* Estilos para el pop-up de Ending*/
+.ending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display:inline-flex;
+}
+.ending-content {
+    background-color: #E7E3F1;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 8px 12px 8px 8px rgba(0.5,0.5,0.5,0.5);
+}
+.ending-div-grande {
+    padding: 5px;
+    height: 150px;
+    background-color: #AFA3D5;
+    border-radius: 12px;
+}
+.ending-content h1 {
+    color: #38375C;
+    text-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.ending-div {
+    margin-top: 2px;
+    text-align: center;
+    color: #38375C;
+    background-color: #AFA3D5;
+}
+.ending-content button {
+    margin-top: 15px;
+    background-color: #F1BFC0;
+    color: white;
+    border-color: white;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+}
+.tabla-final {
+    width: 100%; /* Asegura que la tabla use el ancho completo disponible */
+    table-layout: fixed; /* Fuerza que todas las celdas tengan el mismo ancho */
+    border-collapse: collapse; /* Elimina el espacio entre bordes */
+}
+.tabla-final td {
+    width: 50%; /* Cada celda ocupa el 50% de la tabla */
+    vertical-align: middle; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 10px; /* Espaciado interno */
+}
+.celda {
+    display: flex; /* Usar flexbox para centrar elementos */
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que llene toda la celda */
+}
+.estrellas-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos de estrellas */
+    gap: 8px; /* Espaciado entre la estrella y el texto */
+    display:inline-flex;
+}
+.estrella {
+    width: 30px; /* Ajusta el tamaño de la estrella según tu diseño */
+    height: 30px;
+}
+.vidas {
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    margin: 0;
+}
+.ending-div {
+    font-size: 20px; /* Ajusta según tu diseño */
+    margin: 10px 0;
+}
+h2.ganador {
+    margin-right: 35px;
+}
+

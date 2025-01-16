@@ -11,7 +11,6 @@ export default function UserCheck() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [usuarios, setUsuarios] = useState([]);
     const [showModal, setShowModal] = useState(false); // Estado para controlar la visibilidad del pop-up de create
-    const [showModalTableros, setShowModalTableros] = useState(false);
     const [showModalSearch, setShowModalSearch] = useState(false); // Estado para controlar la visibilidad del pop-up de search
     const { selectedOption, setSelectedOption, codigo, setCodigo, selectedTablero, setSelectedTablero } = useContext(WaitContext);
     
@@ -30,25 +29,27 @@ export default function UserCheck() {
             console.log(response.data.user)
             setStatus(response.data.message)
             setIsLoggedIn(true); // Si el usuario está logeado
-            // (**) Revisar si el jugador ya se encuentra en una partida (enviarlo a ella)
+            // Revisar si el jugador ya se encuentra en una partida (enviarlo a ella)
             axios.get(`${import.meta.env.VITE_BACKEND_URL}/jugadores/find/${nombre}`)
             .then(response => {
             if (response.data.encontrado) {
                 // Enviar al usuario a su juego
-                window.location.href = '/board';
+                window.location.href = '/fight';
             }
             })
             .catch(error => {
-            console.error('Error verificando si ya tiene una partida en curso:', error);
+                console.error('Error verificando si ya tiene una partida en curso:', error);
             });
             // Realizar la segunda consulta para obtener jugadores
             axios.get(`${import.meta.env.VITE_BACKEND_URL}/usuarios`)
             .then(response => {
-            const sortedUsuarios = response.data.sort((a, b) => b.victorias - a.victorias);
-            setUsuarios(sortedUsuarios);
+                const sortedUsuarios = response.data.sort((a, b) => b.victorias - a.victorias);
+                // Obtener los primeros 10 usuarios
+                const top10Usuarios = sortedUsuarios.slice(0, 10);
+                setUsuarios(top10Usuarios);
             })
             .catch(error => {
-            console.error('Error fetching usuarios:', error);
+                console.error('Error fetching usuarios:', error);
             });
         })
         .catch(error => {
@@ -65,18 +66,11 @@ export default function UserCheck() {
     const handleCloseModal = () => {
         setShowModal(false); // Ocultar el pop-up
     };
-    const handleShowModalTableros = () => {
-        setShowModalTableros(true);
-        setShowModal(false);
-    };
+
     const handleCreate = () => {
-        // Lógica para manejar la creación del juego
-        if (selectedTablero !== "") { // Solo si se ha seleccionado una opción
-        setShowModalTableros(false); // Ocultar el pop-up después de crear el juego
+        setShowModal(false); 
         setCodigo("");
-        } else {
-        alert("Por favor selecciona una opción antes de crear el juego.");
-        }
+        setSelectedOption("2")
     };
 
     //LOGICA JUGAR
@@ -98,10 +92,10 @@ export default function UserCheck() {
     const handleSearch = () => {
         // Lógica para manejar la busqueda del juego
         if (codigo !== "") { 
-        setShowModal(false); // Ocultar el pop-up después de buscar el juego
-        setSelectedOption("");
+            setShowModal(false); // Ocultar el pop-up después de buscar el juego
+            setSelectedOption("");
         } else {
-        alert("Por favor escribe el codigo antes de buscar el juego.");
+            alert("Por favor escribe el codigo antes de buscar el juego.");
         }
     };
 
@@ -144,49 +138,14 @@ export default function UserCheck() {
             <div className="modal">
                 <div className="modal-content">
                 <span className="close" onClick={handleCloseModal}>&times;</span>
-                <h2>Jugadores</h2>
-                <p>Selecciona la cantidad de jugadores de la sala</p>
+                <h2>Crear partida</h2>
+                <p>¿Estás seguro que quieres crear una sala de espera nueva para ti y otro jugador?</p>
                 <form>
-                    <label>
-                    <input type="radio" name="players" value="2" onChange={() => setSelectedOption("2")} /> 2 jugadores
-                    </label><br />
-                    <label>
-                    <input type="radio" name="players" value="3" onChange={() => setSelectedOption("3")} /> 3 jugadores
-                    </label><br />
-                    <label>
-                    <input type="radio" name="players" value="4" onChange={() => setSelectedOption("4")} /> 4 jugadores
-                    </label><br /><br />
-                    {selectedOption && 
-                    <button type="button" onClick={handleShowModalTableros}>Seleccionar</button>
-                    }
+                    {selectedTablero && 
+                    <a href='/wait'>
+                        <button type="button" onClick={handleCreate}>Crear</button>
+                    </a>}
                 </form>
-                </div>
-            </div>
-            }
-
-            {showModalTableros && 
-            <div className="modal">
-                <div className="modal-content">
-                <h2>Tableros</h2>
-                <p>Selecciona el tablero que quieres usar en esta partida</p>
-                <form className="grid-container">
-                    <div className="grid-item">
-                    <img className='tablero' id='tablero-rapido' src={`./assets/imgs/tablero1.png`} alt='Tablero rapido'/>
-                    <input type="radio" name="players" value="1" onChange={() => setSelectedTablero("1")} /> Tablero Rapido
-                    </div>
-                    <div className="grid-item">
-                    <img className='tablero' id='tablero-rodri' src={`./assets/imgs/tablero3.png`} alt='Tablero rodri'/>
-                    <input type="radio" name="players" value="2" onChange={() => setSelectedTablero("2")} /> Tablero Rombo
-                    </div>
-                    <div className="grid-item">
-                    <img className='tablero' id='tablero-romi' src={`./assets/imgs/tablero2.png`} alt='Tablero romi'/>
-                    <input type="radio" name="players" value="3" onChange={() => setSelectedTablero("3")} /> Tablero Original
-                    </div>
-                </form>
-                <br></br>
-                {selectedTablero && <a href='/wait'>
-                    <button type="button" onClick={handleCreate}>Crear</button>
-                    </a> }
                 </div>
             </div>
             }
@@ -218,7 +177,7 @@ export default function UserCheck() {
             {isLoggedIn && (
                 <div>
                 <br></br>
-                <h2>Leaderboard</h2>
+                <h2 className='Leaderboard'>Leaderboard</h2>
                 <table className="leaderboard-table">
                     <thead>
                     <tr>

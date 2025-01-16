@@ -70,7 +70,7 @@ function Signup() {
             required
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Enviar" />
       </form>
     </div>
     </>

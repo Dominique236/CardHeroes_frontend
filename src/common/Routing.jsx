@@ -7,6 +7,8 @@ import Login from '../profile/Login'
 import UserCheck from '../protected/UserCheck'
 import Signup from '../profile/Signup'
 import LogoutButton from '../profile/Logout'
+import Wait from '../game/Wait'
+import Fight from '../game/Fight'
 
 function Routing() {
     return (
@@ -20,7 +22,9 @@ function Routing() {
                 <Route path={'/signup'} element={<Signup/>}/>
                 <Route path={'/logout'} element={<LogoutButton/>}/>
                 <Route path={"/usercheck"} element={<UserCheck/>}/>
+                <Route path={"/wait"} element={<Wait/>}/>
                 <Route path={'/choose'} element={<Choose/>}/>
+                <Route path={'/fight'} element={<Fight/>}/>
             </Routes>  
         </BrowserRouter>
         </>
