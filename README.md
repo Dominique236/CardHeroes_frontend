@@ -14,6 +14,9 @@ El frontend de **CardHeroes** está desarrollado en **React**, una biblioteca de
 - **Axios**: para la comunicación eficiente con el backend.
 - **Vite**: como herramienta de desarrollo y construcción rápida.
 
+El diseño del frontend fue creado en **Figma**. Puedes ver los mockups y el diseño completo en el siguiente enlace:  
+[Diseño en Figma](https://www.figma.com/design/mhZBSidLsBYUH5goohwOgO/Mockups-Personal?node-id=0-1&t=Ccs2qu0dcE4q8zdS-1)
+
 ### 💻 Cómo ejecutar el frontend localmente:
 
 1. Clona el repositorio.
