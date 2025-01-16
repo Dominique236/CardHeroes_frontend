@@ -43,7 +43,7 @@ const Choose = () => {
     });
   }, [token]);
 
-  // Asigna valores a las variables casillas_ad, casilla_ac y players_info cada 3 segundos
+  // Revisa los arcanos no disponibles
   useEffect(() => {
     if (arcanos) {
       const interval = setInterval(() => {

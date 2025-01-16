@@ -123,7 +123,7 @@ export default function Wait() {
   }, [espera]);
 
   const handleCreatePartida = () => {
-    // Crea la partida (crea partida, sus casillas, y los jugadores que estaban en espera)
+    // Crea la partida (crea partida y los jugadores que estaban en espera)
     return axios.post(`${import.meta.env.VITE_BACKEND_URL}/partidas/${espera}/${selectedTablero}`)
     .then(response => {
       console.log("Partida creada:", response.data);
