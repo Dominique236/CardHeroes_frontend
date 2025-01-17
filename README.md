@@ -67,3 +67,32 @@ El backend de **CardHeroes** está construido con **Node.js** y utiliza **Koa**,
 El frontend de **CardHeroes** está desplegado en **Netlify** y está disponible en:  [https://cardheroes.netlify.app/](https://cardheroes.netlify.app/)
 
 El backend de **CardHeroes** está desplegado en **Render** y está disponible en:  [https://cardheroes-api.onrender.com](https://cardheroes-api.onrender.com)
+
+---
+
+## 🕹️ Demostración y explicación de como jugar
+
+### 1. Inicio de Sesión
+El usuario se registra y luego ingresa sus credenciales para acceder al juego.
+   ![Inicio de sesión](public/assets/demo/iniciar_sesion.png)
+
+### 2. Comenzar partida:
+Una vez logueado, el usuario puede iniciar una nueva partida. Mientras que otro usuario logueado podría ingresar a la misma sala de espera.
+   ![Comenzar partida](public/assets/demo/comenzar_partida.png)
+   ![Comenzar partida2](public/assets/demo/comenzar_partida2.png)
+
+### 3. Elegir personaje:
+Antes de jugar, cada jugador debe seleccionar su personaje favorito.
+   ![Inicio de sesión](public/assets/demo/elegir_personaje.png)
+
+### 4. Jugar:
+Aquí cada jugador va eligiendo la carta que desea jugar de forma estratégica.
+   ![Comenzar partida](public/assets/demo/jugar.png)
+
+### 5. Usar habilidad:
+Durante el juego, si un jugador logro ganar una ronda, obtendrá una estrella. Esta estrella permite usar la habilidad especial del personaje elegido al comienzo.
+   ![Inicio de sesión](public/assets/demo/habilidad.png)
+
+### 6. Fin del juego:
+Cuando termina la partida, es decir, un jugador se queda sin vidas, se muestra un resumen del resultado.
+   ![Comenzar partida](public/assets/demo/final.png)
