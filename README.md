@@ -66,4 +66,4 @@ El backend de **CardHeroes** está construido con **Node.js** y utiliza **Koa**,
 
 El frontend de **CardHeroes** está desplegado en **Netlify** y está disponible en:  [https://cardheroes.netlify.app/](https://cardheroes.netlify.app/)
 
-El backend de **CardHeroes** está desplegado en **Render** y está disponible en:  [https://cardheroes.netlify.app/](https://cardheroes-api.onrender.com)
+El backend de **CardHeroes** está desplegado en **Render** y está disponible en:  [https://cardheroes-api.onrender.com](https://cardheroes-api.onrender.com)
