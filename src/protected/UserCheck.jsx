@@ -141,10 +141,9 @@ export default function UserCheck() {
                 <h2>Crear partida</h2>
                 <p>¿Estás seguro que quieres crear una sala de espera nueva para ti y otro jugador?</p>
                 <form>
-                    {selectedTablero && 
                     <a href='/wait'>
                         <button type="button" onClick={handleCreate}>Crear</button>
-                    </a>}
+                    </a>
                 </form>
                 </div>
             </div>
