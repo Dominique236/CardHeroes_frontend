@@ -71,6 +71,7 @@ export default function UserCheck() {
         setShowModal(false); 
         setCodigo("");
         setSelectedOption("2")
+        setSelectedTablero("0");
     };
 
     //LOGICA JUGAR
